@@ -1,4 +1,4 @@
-package com.codinginflow.despesas;
+package com.codinginflow.despesas.Repository;
 
 
 import android.app.Application;
@@ -6,7 +6,10 @@ import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 
-import java.nio.channels.AsynchronousChannelGroup;
+import com.codinginflow.despesas.Dao.DespesaDao;
+import com.codinginflow.despesas.Database.DespesaDatabase;
+import com.codinginflow.despesas.Entity.Despesa;
+
 import java.util.List;
 
 public class DespesaRepository {
