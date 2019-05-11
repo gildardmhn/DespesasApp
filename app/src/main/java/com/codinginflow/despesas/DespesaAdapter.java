@@ -1,4 +1,4 @@
-package com.codinginflow.despesas.Adapter;
+package com.codinginflow.despesas;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.codinginflow.despesas.Entity.Despesa;
-import com.codinginflow.despesas.R;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DespesaAdapter extends ListAdapter<Despesa, DespesaAdapter.DespesaHolder> {
 

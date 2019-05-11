@@ -1,12 +1,12 @@
-package com.codinginflow.despesas.ViewModel;
+package com.codinginflow.despesas;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.codinginflow.despesas.Entity.Despesa;
-import com.codinginflow.despesas.Repository.DespesaRepository;
+import com.codinginflow.despesas.Despesa;
+import com.codinginflow.despesas.DespesaRepository;
 
 import java.util.List;
 

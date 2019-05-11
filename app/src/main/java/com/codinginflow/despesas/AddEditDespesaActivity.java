@@ -1,4 +1,4 @@
-package com.codinginflow.despesas.Activity;
+package com.codinginflow.despesas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,8 +9,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.codinginflow.despesas.R;
 
 public class AddEditDespesaActivity extends AppCompatActivity {
 
