@@ -40,9 +40,11 @@ public abstract class DespesaDatabase extends RoomDatabase {
     private static class PopulateDbAsyncTask extends AsyncTask<Void, Void, Void> {
 
         private DespesaDao despesaDao;
+        private EstabelecimentoDao estabelecimentoDao;
 
         private PopulateDbAsyncTask(DespesaDatabase db){
             despesaDao = db.despesaDao();
+            estabelecimentoDao = db.estabelecimentoDao();
         }
         @Override
         protected Void doInBackground(Void... voids) {
@@ -51,7 +53,13 @@ public abstract class DespesaDatabase extends RoomDatabase {
             despesaDao.insert(new Despesa("Gás", "Brasil Gas", "Fixa", 70.5 ));
             despesaDao.insert(new Despesa("Agua", "Fatura da Enel", "Nao Fixa", 70.4 ));
 
+            estabelecimentoDao.insert(new Estabelecimento("Gago", "Rua rodrigues juniro", "222222"));
+            estabelecimentoDao.insert(new Estabelecimento("Agua", "Praça do leao", "33333"));
+            estabelecimentoDao.insert(new Estabelecimento("JHJKHKJhk", "praça do chalé", "22555"));
+
             return null;
         }
     }
+
+
 }

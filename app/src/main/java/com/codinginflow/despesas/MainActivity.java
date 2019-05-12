@@ -130,10 +130,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.delete_all_despesas:
+            /*case R.id.delete_all_despesas:
                 despesaViewModel.deleteAllDespesas();
                 Toast.makeText(this, "Todas as despesas foram removidas", Toast.LENGTH_SHORT).show();
-                return true;
+                return true;*/
+            case R.id.estabelecimento_menu:
+                startActivity(new Intent(getApplicationContext(), EstabelecimentoActivity.class));
             default:
                 return super.onOptionsItemSelected(item);
         }
