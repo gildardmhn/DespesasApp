@@ -9,12 +9,13 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-@Database(entities = {Despesa.class}, version = 1)
+@Database(entities = {Despesa.class, Estabelecimento.class}, version = 1)
 public abstract class DespesaDatabase extends RoomDatabase {
 
     private static DespesaDatabase instanceDatabase;
 
     public abstract DespesaDao despesaDao();
+    public abstract EstabelecimentoDao estabelecimentoDao();
 
     public static synchronized DespesaDatabase getInstance(Context context){
         if (instanceDatabase == null){
@@ -34,6 +35,7 @@ public abstract class DespesaDatabase extends RoomDatabase {
             new PopulateDbAsyncTask(instanceDatabase).execute();
         }
     };
+
 
     private static class PopulateDbAsyncTask extends AsyncTask<Void, Void, Void> {
 

@@ -5,9 +5,6 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.codinginflow.despesas.Despesa;
-import com.codinginflow.despesas.DespesaRepository;
-
 import java.util.List;
 
 public class DespesaViewModel extends AndroidViewModel {
