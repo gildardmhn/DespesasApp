@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".AddEditEstabelecimentoActivity"
             android:parentActivityName=".EstabelecimentoActivity"/>
         <activity android:name=".EstabelecimentoActivity"
@@ -16,15 +17,25 @@
         <activity
             android:name=".AddEditDespesaActivity"
             android:parentActivityName=".MainActivity" />
+=======
+>>>>>>> 4b8f2a90cbc392464f853b696d484db03ec76cd2
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/Platform.MaterialComponents" />
+        <activity
+            android:name=".CadastroActivity"
+            android:theme="@style/Platform.MaterialComponents" />
+        <activity
+            android:name=".AddEditDespesaActivity"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

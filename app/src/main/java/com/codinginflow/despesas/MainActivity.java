@@ -16,6 +16,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.codinginflow.despesas.adapters.DespesaAdapter;
+import com.codinginflow.despesas.models.Despesa;
+import com.codinginflow.despesas.viewmodels.DespesaViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
@@ -30,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // TODO: Verificar usuário ou deixar login como padrão
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
 
         FloatingActionButton buttonAddDespesa = findViewById(R.id.button_add_despesa);
         buttonAddDespesa.setOnClickListener(new View.OnClickListener() {
@@ -99,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (requestCode == EDIT_DESPESA_REQUEST && resultCode == RESULT_OK) {
 
             int id = data.getIntExtra(AddEditDespesaActivity.EXTRA_ID, -1);
-            if(id == - 1){
+            if (id == -1) {
                 Toast.makeText(this, "Despesa não pode ser atualizada", Toast.LENGTH_SHORT).show();
                 return;
             }
