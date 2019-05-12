@@ -109,13 +109,13 @@ public class CadastroActivity extends AppCompatActivity {
     public boolean validate() {
         boolean valid = true;
 
-        String name = nomeText.getText().toString();
+        String nome = nomeText.getText().toString();
         String email = emailText.getText().toString();
-        String mobile = telefoneText.getText().toString();
-        String password = senha1Text.getText().toString();
-        String reEnterPassword = senha2Text.getText().toString();
+        String telefone = telefoneText.getText().toString();
+        String senha1 = senha1Text.getText().toString();
+        String senha2 = senha2Text.getText().toString();
 
-        if (name.isEmpty() || name.length() < 3) {
+        if (nome.isEmpty() || nome.length() < 3) {
             nomeText.setError("at least 3 characters");
             valid = false;
         } else {
@@ -129,22 +129,22 @@ public class CadastroActivity extends AppCompatActivity {
             emailText.setError(null);
         }
 
-        if (mobile.isEmpty() || mobile.length() != 10) {
+        if (telefone.isEmpty() || telefone.length() != 10) {
             telefoneText.setError("Enter Valid Mobile Number");
             valid = false;
         } else {
             telefoneText.setError(null);
         }
 
-        if (password.isEmpty() || password.length() < 4 || password.length() > 10) {
+        if (senha1.isEmpty() || senha1.length() < 4 || senha1.length() > 10) {
             senha1Text.setError("between 4 and 10 alphanumeric characters");
             valid = false;
         } else {
             senha1Text.setError(null);
         }
 
-        if (reEnterPassword.isEmpty() || reEnterPassword.length() < 4 || reEnterPassword.length() > 10 || !(reEnterPassword.equals(password))) {
-            senha2Text.setError("Password Do not match");
+        if (senha2.isEmpty() || senha2.length() < 4 || senha2.length() > 10 || !(senha2.equals(senha1))) {
+            senha2Text.setError("As senhas não coincidem!");
             valid = false;
         } else {
             senha2Text.setError(null);

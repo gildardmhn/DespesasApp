@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(this, CadastroActivity.class);
+        // TODO: Verificar usuário ou deixar login como padrão
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
 
         FloatingActionButton buttonAddDespesa = findViewById(R.id.button_add_despesa);
