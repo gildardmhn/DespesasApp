@@ -9,7 +9,12 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-@Database(entities = {Despesa.class, Estabelecimento.class}, version = 1)
+import com.codinginflow.despesas.daos.DespesaDao;
+import com.codinginflow.despesas.daos.EstabelecimentoDao;
+import com.codinginflow.despesas.models.Despesa;
+import com.codinginflow.despesas.models.Estabelecimento;
+
+@Database(entities = {Despesa.class, Estabelecimento.class}, version = 1, exportSchema = false)
 public abstract class DespesaDatabase extends RoomDatabase {
 
     private static DespesaDatabase instanceDatabase;
